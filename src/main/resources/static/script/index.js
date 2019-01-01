@@ -1,7 +1,8 @@
     $(function(){
 
         var setRenderImg = ""
-        var imgArr = ['bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg', 'bg-06.jpg', 'bg-07.jpg']
+        // var imgArr = ['bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg', 'bg-06.jpg', 'bg-07.jpg']
+        var imgArr = [/*[[${request.imageString}]]*/];
 
         imgArr.forEach(function(element) {
             var url = 'http://localhost/assets/'
@@ -18,7 +19,7 @@
             console.log("click backgraound", txt)
             $('pattern#changeBackground').html(txt)
         })
-    
+
     });
 
     $('.btn-success').on('click', function(){

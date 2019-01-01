@@ -3,6 +3,7 @@ package hello;
 import java.io.IOException;
 import java.util.stream.Collectors;
 
+import hello.service.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -24,13 +25,17 @@ public class FileUploadController {
 
     @ModelAttribute
     public void initial(Model model){
-        model.addAttribute("mesage","What the fuck");
+        model.addAttribute("message","What the fuck");
+        model.addAttribute("imageString",imageService.getImageString());
     }
 
     @Autowired
     public FileUploadController(StorageService storageService) {
         this.storageService = storageService;
     }
+
+    @Autowired
+    private ImageService imageService;
 
     @GetMapping("/")
     public String listUploadedFiles(Model model) throws IOException {
@@ -39,6 +44,7 @@ public class FileUploadController {
                 path -> MvcUriComponentsBuilder.fromMethodName(FileUploadController.class,
                         "serveFile", path.getFileName().toString()).build().toString())
                 .collect(Collectors.toList()));
+
 
         return "index";
     }
