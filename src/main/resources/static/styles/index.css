@@ -1,0 +1,27 @@
+.img-show{
+    width: 320px;
+    height: 320px;
+    margin: auto;
+    background-color: #fff;
+    /* box-shadow: 0 0 0 1px #E3E9ED; */
+}
+
+.img-show > svg {
+    height: 320px;
+    width: 320px;
+}
+
+.setImg {
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+}
+
+.renderImg {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.setBackground {
+    text-align: center
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Page Title</title>
+    <link rel="stylesheet" href="./library/bootstrap/css/bootstrap.min.css">
+    <link href="./styles/index.css" rel="stylesheet">
+</head>
+<body>
+<div th:if="${message}">
+    <h2 th:text="${message}"/>
+</div>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Background</a>
+    </nav>
+    <div class="container-fluid">
+        <h1>This is a Heading</h1>
+        <p>This is a paragraph.</p>
+        <div class="img-show">
+           <div class="load-img"></div>
+        </div>
+        <!-- <button type="button" class="btn btn-success">Success</button> -->
+        <div class="renderImg"></div>
+    </div>
+
+    <script src="./library/jquery/jquery-3.3.1.min.js"></script>
+    <script src="./library/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./script/index.js"></script>
+
+</body>
+    
+</html>
